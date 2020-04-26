@@ -1,6 +1,7 @@
-# aws-lambda-function-to-invoke-flows
+#Lambda function to invoke flows in Salesforce
 
-# Sample Lambda function to invoke flows in Salesforce
+## Description
+This repo contains a lambda function that invokes flows in Salesforce using Salesforce Rest API.
 
 ## Prework
 
@@ -10,16 +11,16 @@ Have the below details from your salesforce org.
  - Password
  - Security token (please find the related articles [here](https://success.salesforce.com/answers?id=90630000000glADAAY) and [here](https://help.salesforce.com/articleView?id=000331668&type=1&mode=1))
 
-## Code
-Clone this repository to your local.
+## Setup Instructions
+ - Clone this repository to your local. 
+ - Open cmd/terminal and navigate to the cloned Folder.
+ - run the command, npm install
+ - Navigate to /node_modules/jsforce/lib/connection.js.
+ - Change the Salesforce API version to latest version and save.
+ - Zip the contents (inside the Cloned Folder)
+ - Login to AWS and upload the zip file to a labmda function (Environment - Node.js).
 
- - cd SFLambdaSample
- - npm install
- - navigate to /node_modules/jsforce/lib/connection.js and change ***version: "42.0"*** (in line 26) to ***version: "47.0"***  and save.
- - zip the contents (inside the SFLambdaSample)
- - Upload it to a labmda function (Environment - Node.js).
-
-After uploading create 3 environment variables as below.
+After uploading, create the following environment variables as shown below:
 
  - username - yourSalesforceUserName
  - password - yourSalesforcePassword
@@ -27,7 +28,7 @@ After uploading create 3 environment variables as below.
 
 Under **Basic settings** increase the Timeout to 1 min
 
-# Testing
+# Testing in AWS Console
 
  - Configure test event by clicking on ***select a test event*** on top-right of page.
  - Use the basic Hello World, enter any name for **Event name** and create.
