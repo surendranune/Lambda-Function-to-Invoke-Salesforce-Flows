@@ -28,7 +28,7 @@ After uploading, create the following environment variables as shown below:
 
 Under **Basic settings** increase the Timeout to 1 min
 
-# Testing in AWS Console
+## Testing in AWS Console
 
  - Configure test event by clicking on ***select a test event*** on top-right of page.
  - Use the basic Hello World, enter any name for **Event name** and create.
